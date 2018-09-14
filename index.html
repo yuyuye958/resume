@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
+    <script src="//at.alicdn.com/t/font_838460_x32iajcecd.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
     <title>我的个人简历</title>
 </head>
+
 <body>
-    <div class="topNavBar clearfix">
-        <a class="logo float-left" href="#">
-            <span class="rs">RS</span><span class="card">card</span>
-        </a>
-        <nav class="float-right">
-            <ul class="clearfix">
-                <li>
-                    <a href="#">关于</a>
-                </li>
-                <li>
-                    <a href="#">技能</a>
-                </li>
-                <li>
-                    <a href="#">作品</a>
-                </li>
-                <li>
-                    <a href="#">博客</a>
-                </li>
-                <li>
-                    <a href="#">日历</a>
-                </li>
-                <li>
-                    <a href="#">联系方式</a>
-                </li>
-                <li>
-                    <a href="#">其他</a>
-                </li>
-            </ul>
-        </nav>   
+    <!-- 导航 -->
+    <div class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a class="logo float-left" href="#">
+                <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav class="float-right">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">关于</a>
+                    </li>
+                    <li>
+                        <a href="#">技能</a>
+                    </li>
+                    <li>
+                        <a href="#">作品</a>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                    </li>
+                    <li>
+                        <a href="#">日历</a>
+                    </li>
+                    <li>
+                        <a href="#">联系方式</a>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </div>
+
+    <!-- 背景 -->
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+
+    <!-- 名片 -->
+    <main>
+        <div class="myCard">
+            <div class="myCard-inner clearfix">
+                <div class="photo float-left">
+                    <img src="./img/avatar.jpg" alt="photo">
+                </div>
+                <div class="intro float-left">
+                    <span class="welcome">Hello<span class="triangle"></span></span>
+                    <h1>叶晓宇</h1>
+                    <p>前端开发工程师</p>
+                    <hr>
+                    <div class="intro-text">
+                        <p>
+                            <span>年龄</span><span>23</span>
+                        </p>
+                        <p>
+                            <span>所在城市</span><span>上海</span>
+                        </p>
+                        <p>
+                            <span>邮箱</span><span>yuyuye958@qq.com</span>
+                        </p>
+                        <p>
+                            <span>手机</span><span>18019718973</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="media">
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu0"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+
+    </main>
+
+
 </body>
+
 </html>

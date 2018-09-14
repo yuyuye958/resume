@@ -1,14 +1,19 @@
 body{
-    background-color: black;
-    color: white;
-    margin: 0;
+    background-color: #efefef;
 }
-a{
-    text-decoration: none;
+*{
+    text-decoration: none; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{ 
     color: inherit;
 }
-ul{
-    list-style: none;
+hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE;
 }
 .clearfix::after{
     content:'';
@@ -24,22 +29,23 @@ ul{
 
 
 
-
+/* 导航 */
 .topNavBar {
-    padding: 20px 16px 20px 16px;
+    padding: 20px 0 20px 0;
+    position: fixed;
+    width: 100%;
 }
-.topNavBar > nav {
+.topNavBar-inner{
+    padding:0 16px;
+}
+.topNavBar nav {
     padding-top: 7px;
   }
-.topNavBar > nav > ul{
-    margin: 0;
-    padding: 0;
-}
-.topNavBar > nav > ul > li{
+.topNavBar nav > ul > li{
     float: left;
     margin: 0 17px 0 17px;
 }
-.topNavBar > nav > ul > li >a{
+.topNavBar nav > ul > li >a{
     font-size: 12px;
     font-weight: bold;
     color: #b7b7b7;
@@ -48,7 +54,7 @@ ul{
     padding: 5px 0 5px 0;
     display: block;
 }
-.topNavBar > nav > ul > li >a:hover{
+.topNavBar nav > ul > li >a:hover{
     border-bottom: 3px solid #e06567;
 }
 .topNavBar .logo{
@@ -62,4 +68,92 @@ ul{
 }
 .topNavBar .logo .card {
     color: #9a9da2;
+}
+
+/* 背景 */
+.banner{
+    height: 515px;
+    background: url(./img/rs-cover.jpg) no-repeat center center;
+    background-size: cover;
+ 
+}
+.banner .mask{
+    height: 515px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* 名片 */
+.myCard{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+.myCard-inner {
+    background-color: white;
+    padding: 50px;
+}
+.myCard-inner .intro{
+    width: 470px;
+    margin-left: 65px;
+}
+.myCard-inner .intro .welcome{
+    color: white;
+    background-color: #e6686a;
+    padding: 4px 16px;
+    display: inline-block;
+    line-height: 22px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.myCard-inner .intro .triangle{
+    display: inline-block;
+    border: 10px solid transparent;
+    border-left-color: #e6686a;
+    border-top-width: 0;
+    width: 0;
+    position: absolute;
+    top:100%;
+    left: 10px;
+}
+
+.myCard-inner hr{
+    margin: 20px 0;
+}
+
+.intro-text p {
+    padding: 8px 0;
+}
+.intro-text p span{
+    display: inline-block;
+}
+.intro-text p span:first-child{
+    width:30%;
+    font-weight: bold;
+}
+.intro-text p span:nth-child(2){
+    width:70%;
+    color: #9da0a7;
+}
+
+.media{
+    background-color: #E6686A;
+    text-align: center
+}
+.media > a{
+    display: inline-block;
+    width:40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 16px;
+}
+.media a svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align : top;
+}
+.media > a:hover{
+    background: #CF5D5F;
 }
