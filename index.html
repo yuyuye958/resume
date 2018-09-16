@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
     <script src="//at.alicdn.com/t/font_838460_x32iajcecd.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
     <style type="text/css">
         .icon {
             width: 1em;
@@ -62,7 +63,7 @@
 
     <!-- 名片 -->
     <main>
-        <div class="myCard">
+        <div class="myCard section">
             <div class="myCard-inner clearfix">
                 <div class="photo float-left">
                     <img src="./img/avatar.jpg" alt="photo">
@@ -72,7 +73,7 @@
                     <h1>叶晓宇</h1>
                     <p>前端开发工程师</p>
                     <hr>
-                    <div class="intro-text">
+                    <div class="myCardText">
                         <p>
                             <span>年龄</span><span>23</span>
                         </p>
@@ -83,7 +84,7 @@
                             <span>邮箱</span><span>yuyuye958@qq.com</span>
                         </p>
                         <p>
-                            <span>手机</span><span>18019718973</span>
+                            <span>手机</span><span>180xxxx8973</span>
                         </p>
                     </div>
                 </div>
@@ -113,9 +114,113 @@
             </footer>
         </div>
 
+        <div class="downloadresume-wrapper section">
+            <a href="./resume.pdf" class="downloadresume" target="_blank" download>下载 PDF 简历</a>
+        </div>
+        <p class="selfIntro">
+            -----自我介绍-----
+        </p>
+
     </main>
 
+    <!-- 技能 -->
+    <section class="skills section">
+        <h2 class="sectiontitle">技能</h2>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML 5 & CSS 3</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width: 90%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width: 80%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>jQuery</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width: 80%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>Bootstrap</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width: 85%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width: 40%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>React</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width: 35%;">
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+    </section>
+
+    <!-- 作品集 -->
+    <section class="portfolio section">
+        <h2 class="sectiontitle">作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">
+                    所有
+                </li>
+                <li id="portfolio2">
+                    框架
+                </li>
+                <li id="portfolio3">
+                    原生JS&CSS
+                </li>
+            </ol>
+            <div class="bar">
+                <div id="portfolioBar" class="barState1"></div>
+            </div>
+        </nav>
+        <div class="works">
+            <div class="work1">
+                <img src="./img/works1.jpg" alt="作品1">
+            </div>
+            <div class="work2">
+                <img src="./img/works2.jpg" alt="作品1">
+            </div>
+            <div class="work3">
+                <img src="./img/works3.jpg" alt="作品1">
+            </div>
+        </div>
+
+    </section>
 
 </body>
+
+<script>
+
+    portfolio1.onclick = function () {
+        portfolioBar.className = 'barState1'
+    }
+    portfolio2.onclick = function () {
+        portfolioBar.className = 'barState2'
+    }
+    portfolio3.onclick = function () {
+        portfolioBar.className = 'barState3'
+    }
+
+</script>
+
 
 </html>
