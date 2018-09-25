@@ -1,310 +1,335 @@
-body{
-    background-color: #efefef;
+body {
+  background-color: #efefef;
 }
-*{
-    text-decoration: none; 
-    list-style: none;
-    margin: 0;
-    padding: 0;
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-a{ 
-    color: inherit;
-    font-size: 14px;
+a {
+  color: inherit;
+  font-size: 14px;
 }
-hr{
-    height: 0;
-    border: none;
-    border-top: 1px solid #DEDEDE;
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
 }
-.clearfix::after{
-    content:'';
-    display: block;
-    clear: both;
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
 }
-.float-left{
-    float: left;
+.float-left {
+  float: left;
 }
-.float-right{
-    float: right;
+.float-right {
+  float: right;
 }
-.section{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+.section {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
+.sectiontitle {
+  font-size: 34px;
+  font-weight: 600;
+  color: #3d4451;
+  text-align: center;
+  margin-bottom: 30px;
+}
 /* 导航 */
 .topNavBar {
-    padding: 20px 0 20px 0;
-    position: fixed;
-    width: 100%;
+  padding: 20px 0 20px 0;
+  position: fixed;
+  width: 100%;
+  transition: all 0.5s;
+  color: #b7b7b7;
 }
-.topNavBar-inner{
-    padding:0 30px;
+.topNavBar .topNavBar-inner {
+  padding: 0 30px;
 }
-.topNavBar nav {
-    padding-top: 7px;
+.topNavBar .topNavBar-inner nav {
+  padding-top: 5px;
+}
+.topNavBar .topNavBar-inner nav ul > li {
+  float: left;
+  margin: 0 17px 0 17px;
+  position: relative;
+}
+.topNavBar .topNavBar-inner nav ul > li a {
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  padding: 5px 0 5px 0;
+  display: block;
+  position: relative;
+}
+.topNavBar .topNavBar-inner nav ul > li a:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e06567;
+  animation: NavSlide .2s;
+}
+.topNavBar .topNavBar-inner nav ul > li .submenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  color: #3d4451;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.topNavBar .topNavBar-inner nav ul > li .submenu li {
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 8px 10px;
+}
+.topNavBar .topNavBar-inner nav ul li.active > .submenu {
+  display: block;
+  animation: submenuSlide .2s;
+}
+@keyframes submenuSlide {
+  0% {
+    margin-right: 100%;
   }
-.topNavBar nav > ul > li{
-    float: left;
-    margin: 0 17px 0 17px;
+  100% {
+    margin-right: 0%;
+  }
 }
-.topNavBar nav > ul > li >a{
-    font-size: 12px;
-    font-weight: bold;
-    color: #b7b7b7;
-    border-bottom: 3px solid transparent;
-    border-top: 3px solid transparent;
-    padding: 5px 0 5px 0;
-    display: block;
-}
-.topNavBar nav > ul > li >a:hover{
-    border-bottom: 3px solid #e06567;
-}
-.topNavBar .logo{
-    font: 24px 'Arial Black';
-    padding-top: 3px;
-    padding-bottom: 4px;
-}
-.topNavBar .logo .rs {
-    margin-right: 4px;
-    color: #e6686a;
-}
-.topNavBar .logo .card {
-    color: #9a9da2;
-}
-
-/* 背景 */
-.banner{
-    height: 515px;
-    background: url(./img/rs-cover.jpg) no-repeat center center;
-    background-size: cover;
- 
-}
-.banner .mask{
-    height: 515px;
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* 名片 */
-.myCard{
-    margin-top: -340px;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-}
-.myCard-inner {
-    background-color: white;
-    padding: 50px;
-}
-.myCard .intro{
-    width: 470px;
-    margin-left: 65px;
-}
-.myCard .intro .welcome{
-    color: white;
-    background-color: #e6686a;
-    padding: 4px 16px;
-    display: inline-block;
-    line-height: 22px;
-    margin-bottom: 30px;
-    position: relative;
-}
-.myCard .intro .triangle{
-    display: inline-block;
-    border: 10px solid transparent;
-    border-left-color: #e6686a;
-    border-top-width: 0;
+@keyframes NavSlide {
+  0% {
     width: 0;
-    position: absolute;
-    top:100%;
-    left: 10px;
+  }
+  100% {
+    width: 100%;
+  }
 }
-
-.myCard hr{
-    margin: 20px 0;
+.topNavBar .topNavBar-inner .logo {
+  font: 24px 'Arial Black';
+  padding-top: 3px;
+  padding-bottom: 4px;
 }
-
-.myCardText p {
-    padding: 8px 0;
+.topNavBar .topNavBar-inner .logo .rs {
+  margin-right: 4px;
+  color: #e6686a;
 }
-.myCardText p span{
-    display: inline-block;
+.topNavBar .topNavBar-inner .logo .card {
+  color: #9a9da2;
 }
-.myCardText p span:first-child{
-    width:30%;
-    font-weight: bold;
+.sticky {
+  background-color: white;
+  padding: 10px 0;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: #3d4451;
 }
-.myCardText p span:nth-child(2){
-    width:70%;
-    color: #9da0a7;
+/* 背景 */
+.banner {
+  height: 515px;
+  background: url(img/rs-cover.jpg) no-repeat center center;
+  background-size: cover;
 }
-
-.media{
-    background-color: #E6686A;
-    text-align: center;
+.banner .mask {
+  height: 515px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.media > a{
-    display: inline-block;
-    width:40px;
-    line-height: 30px;
-    padding: 5px 0;
-    border-radius: 50%;
-    margin: 16px;
+/* 名片 */
+.myCard {
+  margin-top: -330px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
-.media > a > svg{
-    width: 30px;
-    height: 30px;
-    fill: white;
-    vertical-align : top;
+.myCard .myCard-inner {
+  background-color: white;
+  padding: 50px;
 }
-.media > a:hover{
-    background: #CF5D5F;
+.myCard .myCard-inner .intro {
+  width: 470px;
+  margin-left: 65px;
 }
-
+.myCard .myCard-inner .intro .hello {
+  color: white;
+  background-color: #e6686a;
+  padding: 4px 16px;
+  display: inline-block;
+  line-height: 22px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.myCard .myCard-inner .intro .hello .triangle {
+  display: inline-block;
+  border: 10px solid transparent;
+  border-left-color: #e6686a;
+  border-top-width: 0;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  left: 10px;
+}
+.myCard .myCard-inner .intro hr {
+  margin: 20px 0;
+}
+.myCard .myCard-inner .intro .myCardText p {
+  padding: 8px 0;
+}
+.myCard .myCard-inner .intro .myCardText p span {
+  display: inline-block;
+}
+.myCard .myCard-inner .intro .myCardText p span:first-child {
+  width: 30%;
+  font-weight: bold;
+}
+.myCard .myCard-inner .intro .myCardText p span:nth-child(2) {
+  width: 70%;
+  color: #9da0a7;
+}
+.media {
+  background-color: #e6686a;
+  text-align: center;
+}
+.media > a {
+  display: inline-block;
+  width: 40px;
+  line-height: 30px;
+  padding: 5px 0;
+  border-radius: 50%;
+  margin: 16px;
+}
+.media > a:hover {
+  background: #cf5d5f;
+}
+.media > a svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  vertical-align: top;
+}
 /* 下载pdf简历 */
-.downloadresume-wrapper{
-    text-align: center
+.downloadresume-wrapper {
+  text-align: center;
 }
-
-.downloadresume{
-    padding: 20px 55px;
-    border: 1px solid #CDCFF1;
-    border-radius: 3px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 30px 0;
-    transition: box-shadow 0.2s;
+.downloadresume {
+  padding: 20px 55px;
+  border: 1px solid #cdcff1;
+  border-radius: 3px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 30px 0;
+  transition: box-shadow 0.2s;
 }
-
-.downloadresume:hover{
-    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
+.downloadresume:hover {
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
 }
-
-.selfIntro{
-    max-width: 940px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: "楷体";
-    font-size: 18px;
-    line-height: 1.8;
+.selfIntro {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "楷体";
+  font-size: 18px;
+  line-height: 1.8;
 }
-
 /* 技能 */
-.skills{
-    margin: 60px auto;
+.skills {
+  margin: 60px auto;
 }
-
-.sectiontitle{
-    font-size: 34px;
-    font-weight: 600;
-    color: #3d4451;
-    text-align: center;
-    margin-bottom: 30px;
+.skills ol {
+  padding: 45px 50px 25px;
+  background-color: white;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
-.skills ol{
-    padding:45px 50px 25px;
-    background-color: white;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+.skills ol li {
+  box-sizing: border-box;
+  float: left;
+  width: 48%;
 }
-
-.skills li{
-    box-sizing: border-box;
-    float: left;
-    width: 48%;
+.skills ol li:nth-child(even) {
+  float: right;
 }
-
-.skills li:nth-child(even){
-    float: right;
+.skills h3 {
+  font-size: 14px;
+  font-weight: normal;
 }
-
-.skills h3{
-    font-size: 14px;
-    font-weight: normal;
+.progressbar {
+  background-color: #fae1e1;
+  height: 3px;
+  border-radius: 2px;
+  margin: 5px 0 30px;
 }
-
-.progressbar{
-    background-color: #FAE1E1;
-    height:3px;
-    border-radius: 2px;
-    margin: 5px 0 30px;
+.progress {
+  background-color: #e6686a;
+  height: 3px;
+  border-radius: 2px;
 }
-
-.progress{
-    background-color: #E6686A;
-    height:3px;
-    border-radius: 2px;
-}
-
 /* 作品集 */
-.portfolio{
-    text-align: center
+.portfolio {
+  text-align: center;
 }
-
-.portfolio nav{
-    display: inline-block;
-    margin-bottom: 20px;
+.portfolio nav {
+  display: inline-block;
+  margin-bottom: 20px;
 }
-
-.portfolio nav ol{
-    display: inline-block;
-    vertical-align: top;
+.portfolio nav ol {
+  display: inline-block;
+  vertical-align: top;
 }
-
-.portfolio nav li{
-    float: left;
-    margin-left: 40px;
-    cursor: pointer;
+.portfolio nav ol li {
+  float: left;
+  margin-left: 40px;
+  cursor: pointer;
 }
-
-.portfolio nav li:nth-child(1){
-    margin-left: 0;
+.portfolio nav ol li:nth-child(1) {
+  margin-left: 0;
 }
-
-.portfolio nav .bar{
-    height: 5px;
-    background-color: white;
-    margin: 8px auto;
+.portfolio nav .bar {
+  height: 5px;
+  background-color: white;
+  margin: 8px auto;
 }
-
-#portfolioBar{
-    height: 100%;
-    background-color: #E6686A;
-    border-radius: 2px;
-    transition: all 0.4s;
+#portfolioBar {
+  height: 100%;
+  background-color: #e6686a;
+  border-radius: 2px;
+  transition: all 0.4s;
 }
-
 /* 导航切换bar的三个状态 */
-.barState1{
-    margin-left:-3px;
-    width:38px;
+.barState1 {
+  margin-left: -3px;
+  width: 38px;
 }
-.barState2{
-    margin-left:70px;
-    width:38px;
+.barState2 {
+  margin-left: 70px;
+  width: 38px;
 }
-.barState3{
-    margin-left:145px;
-    width:95px;
+.barState3 {
+  margin-left: 145px;
+  width: 95px;
 }
-
 /* 作品 */
-.works{
-    position: relative;
-    height:700px;
+.works {
+  position: relative;
+  height: 700px;
 }
-.work1, .work2, .work3{
-    position: absolute;
+.works .work1,
+.works .work2,
+.works .work3 {
+  position: absolute;
 }
-.work1{
-    left:0;
-    top:0;
+.work1 {
+  left: 0;
+  top: 0;
 }
-.work2{
-    left:645px;
-    top:0;
+.work2 {
+  left: 645px;
+  top: 0;
 }
-.work3{
-    left:645px;
-    top:298px;
+.work3 {
+  left: 645px;
+  top: 298px;
 }
