@@ -39,6 +39,13 @@ hr {
   text-align: center;
   margin-bottom: 30px;
 }
+[data-x].offset {
+  transform: translateY(50px);
+}
+[data-x] {
+  transform: translateY(0);
+  transition: all 0.5s;
+}
 /* 导航 */
 .topNavBar {
   padding: 20px 0 20px 0;
@@ -67,17 +74,6 @@ hr {
   display: block;
   position: relative;
 }
-.topNavBar .topNavBar-inner nav ul > li a:hover::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #e06567;
-  animation: NavSlide .2s;
-}
 .topNavBar .topNavBar-inner nav ul > li .submenu {
   display: none;
   position: absolute;
@@ -95,6 +91,18 @@ hr {
 .topNavBar .topNavBar-inner nav ul li.active > .submenu {
   display: block;
   animation: submenuSlide .2s;
+}
+.topNavBar .topNavBar-inner nav ul li.active a::after,
+.topNavBar .topNavBar-inner nav ul li.highlight a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e06567;
+  animation: NavSlide .2s;
 }
 @keyframes submenuSlide {
   0% {
@@ -261,11 +269,17 @@ hr {
   height: 3px;
   border-radius: 2px;
   margin: 5px 0 30px;
+  overflow: hidden;
 }
 .progress {
   background-color: #e6686a;
   height: 3px;
   border-radius: 2px;
+  transform: translateX(0);
+  transition: all 1s;
+}
+.skills.offset .progress {
+  transform: translateX(-100%);
 }
 /* 作品集 */
 .portfolio {
