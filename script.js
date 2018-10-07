@@ -84,13 +84,19 @@ for (let i = 0; i < aTags.length; i++) {
     }
 }
 
-// 作品集切换
-portfolio1.onclick = function () {
-    portfolioBar.className = 'barState1'
-}
-portfolio2.onclick = function () {
-    portfolioBar.className = 'barState2'
-}
-portfolio3.onclick = function () {
-    portfolioBar.className = 'barState3'
-}
+// 作品轮播
+var mySwiper = new Swiper ('.swiper-container', {
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+  })        

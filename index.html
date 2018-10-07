@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <script src="//at.alicdn.com/t/font_838460_x32iajcecd.js"></script>
     <style type="text/css">
         .icon {
@@ -186,36 +187,22 @@
     <!-- 作品集 -->
     <section data-x id="works" class="portfolio section">
         <h2 class="sectiontitle">作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="portfolio1">
-                    所有
-                </li>
-                <li id="portfolio2">
-                    框架
-                </li>
-                <li id="portfolio3">
-                    原生JS&CSS
-                </li>
-            </ol>
-            <div class="bar">
-                <div id="portfolioBar" class="barState1"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" src="./img/myNav.jpg">
+                <img class="swiper-slide" src="./img/canvas.jpg">
+                <img class="swiper-slide" src="./img/canvas.jpg">
             </div>
-        </nav>
-        <div class="works">
-            <div class="work1">
-                <img src="./img/works1.jpg" alt="作品1">
-            </div>
-            <div class="work2">
-                <img src="./img/works2.jpg" alt="作品1">
-            </div>
-            <div class="work3">
-                <img src="./img/works3.jpg" alt="作品1">
-            </div>
+ 
+            <div class="swiper-pagination"></div>
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
         </div>
     </section>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
     <script type="text/javascript" src="./script.js"></script>
 

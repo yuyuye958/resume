@@ -284,66 +284,9 @@ hr {
 /* 作品集 */
 .portfolio {
   text-align: center;
+  margin-bottom: 100px;
 }
-.portfolio nav {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-.portfolio nav ol {
-  display: inline-block;
-  vertical-align: top;
-}
-.portfolio nav ol li {
-  float: left;
-  margin-left: 40px;
-  cursor: pointer;
-}
-.portfolio nav ol li:nth-child(1) {
-  margin-left: 0;
-}
-.portfolio nav .bar {
-  height: 5px;
-  background-color: white;
-  margin: 8px auto;
-}
-#portfolioBar {
-  height: 100%;
-  background-color: #e6686a;
-  border-radius: 2px;
-  transition: all 0.4s;
-}
-/* 导航切换bar的三个状态 */
-.barState1 {
-  margin-left: -3px;
-  width: 38px;
-}
-.barState2 {
-  margin-left: 70px;
-  width: 38px;
-}
-.barState3 {
-  margin-left: 145px;
-  width: 95px;
-}
-/* 作品 */
-.works {
-  position: relative;
-  height: 700px;
-}
-.works .work1,
-.works .work2,
-.works .work3 {
-  position: absolute;
-}
-.work1 {
-  left: 0;
-  top: 0;
-}
-.work2 {
-  left: 645px;
-  top: 0;
-}
-.work3 {
-  left: 645px;
-  top: 298px;
+.portfolio .swiper-container {
+  width: 720px;
+  height: 405px;
 }
