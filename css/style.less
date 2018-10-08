@@ -29,8 +29,7 @@ hr {
 }
 .section {
 	max-width: 940px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 50px auto;
 }
 .sectiontitle {
 	font-size: 34px;
@@ -239,7 +238,7 @@ hr {
 	border-radius: 3px;
 	font-weight: bold;
 	display: inline-block;
-	margin: 30px 0;
+	margin-bottom: 30px;
 	transition: box-shadow 0.2s;
 	&:hover {
 		box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
@@ -256,7 +255,6 @@ hr {
 
 /* 技能 */
 .skills {
-	margin: 60px auto;
 	ol {
 		padding: 45px 50px 25px;
 		background-color: white;
@@ -298,10 +296,33 @@ hr {
 
 /* 作品集 */
 .portfolio {
-	text-align: center;
-	margin-bottom: 100px;
 	.swiper-container {
 		width: 768px;
 		height: 432px;
-	}  
+	}
+}
+
+/* 留言板 */
+.message {
+	margin: 50px auto;
+	width: 650px;
+	ol {
+		border-top: 1px solid #ececec;
+		background-color: #f4f4f4;
+		li {
+			padding: 12px;
+			border-bottom: 1px solid #ececec;
+		}
+	}
+	form {
+		margin-bottom: 20px;
+		label,input{
+			vertical-align:middle;
+			padding: 3px;
+		}
+		input[type=submit]{
+			margin-left: 10px;
+			padding: 2px 16px;
+		}
+	}
 }
