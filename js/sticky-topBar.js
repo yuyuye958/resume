@@ -1,6 +1,6 @@
 !function () {
     // 导航栏滚动变化
-    var view = document.querySelector('#topNavBar')
+    var view = View('#topNavBar')
 
     var controller = {
         view: null,

@@ -1,6 +1,7 @@
 !function () {
   // 作品轮播
-  var view = document.querySelector('#mySlides')
+  var view = View('#mySlides')
+  
   var controller = {
     view: null,
     mySwiper: null,
